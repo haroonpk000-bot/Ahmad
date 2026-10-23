@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Tech Quiz</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container shell py-4 px-3">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="title m-0">Web Tech Quiz</h1>
+    <button id="theme" class="btn-ghost btn-sm" aria-label="Toggle dark mode">Dark mode</button>
+  </div>
+
+  <div class="cardx">
+    <section id="start" class="text-center py-3">
+      <p class="fs-5 fw-semibold mb-1">Test your web skills</p>
+      <p class="sub mb-4">5 random questions from your chosen topic. 20 seconds each. One 50:50 lifeline.</p>
+      <input id="name" class="form-control text-center mx-auto mb-3 namebox" placeholder="Enter your name" maxlength="30">
+      <div class="pills mb-4" id="cats">
+        <button class="pill on" data-cat="HTML">HTML</button>
+        <button class="pill" data-cat="CSS">CSS</button>
+        <button class="pill" data-cat="JavaScript">JavaScript</button>
+      </div>
+      <button id="go" class="btn-main btn-lg">Start quiz</button>
+      <p class="sub small mt-4 mb-0" id="best"></p>
+    </section>
+
+    <section id="quiz" class="d-none">
+      <div class="seg mb-3" id="seg"></div>
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="chip" id="count"></span>
+        <span class="chip" id="live"></span>
+        <span class="chip" id="left"></span>
+      </div>
+      <div class="timer mb-4" id="timer"><b></b></div>
+      <h2 class="q mb-4" id="q"></h2>
+      <div id="opts"></div>
+      <div class="fb d-none" id="fb"></div>
+      <div class="d-flex justify-content-between mt-3">
+        <button id="fifty" class="btn-ghost">50:50</button>
+        <button id="next" class="btn-main d-none">Next</button>
+      </div>
+    </section>
+
+    <section id="result" class="d-none">
+      <div class="text-center mb-4">
+        <div class="score" id="sc"></div>
+        <p class="fw-semibold fs-5 mt-2 mb-0" id="grade"></p>
+        <p class="sub" id="msg"></p>
+        <div class="seg my-3" id="seg2"></div>
+      </div>
+      <div id="rev" class="mb-4"></div>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <button id="pdf" class="btn-main">Download PDF</button>
+        <button id="again" class="btn-ghost">Try again</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
